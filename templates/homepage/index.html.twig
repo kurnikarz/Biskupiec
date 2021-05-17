@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Zamówienia{% endblock %}
+
+{% block body %}
+    <table>
+        <th>Reference</th>
+        <th>idCustomer</th>
+        <th>idAddressDelivery</th>
+        <th>TotalPaid</th>
+        {% for order in orders %}
+            <tr>
+                <td>{{ order.reference }}</td>
+                <td>{{ order.idCustomer }}</td>
+                <td>{{ order.idAddressDelivery }}</td>
+                <td>{{ order.TotalPaid }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
